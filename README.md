@@ -1,4 +1,4 @@
-# @dkamyshov/ts-type-assert
+# ts-type-assert
 
 Type assertion library for TypeScript.
 
@@ -6,11 +6,11 @@ Type assertion library for TypeScript.
 
 ## Installation
 
-`$ npm i --save-dev @dkamyshov/ts-type-assert`
+`$ npm i --save-dev ts-type-assert`
 
 or
 
-`$ yarn add -D @dkamyshov/ts-type-assert`
+`$ yarn add -D ts-type-assert`
 
 ## Basics and motivation
 
@@ -29,13 +29,10 @@ interface CustomButtonProps {
 type ButtonProps = NativeButtonProps & CustomButtonProps;
 ```
 
-How do you make sure that none of the properties from `CustomButtonProps` overlap those defined in `NativeButtonProps`? `@dkamyshov/ts-type-assert` is to the rescue! Just use `MergePropsWithoutOverlapping` utility type:
+How do you make sure that none of the properties from `CustomButtonProps` overlap those defined in `NativeButtonProps`? `ts-type-assert` is to the rescue! Just use `MergePropsWithoutOverlapping` utility type:
 
 ```typescript
-import {
-  Assert,
-  MergePropsWithoutOverlapping,
-} from '@dkamyshov/ts-type-assert';
+import { Assert, MergePropsWithoutOverlapping } from 'ts-type-assert';
 
 // ...
 
@@ -62,7 +59,7 @@ error TS2344: Type 'AssertionError<"Some properties of T1 and T2 overlap", { __p
 
 ## Other utility types
 
-## `Is<T1, T2>`
+### `Is<T1, T2>`
 
 Checks whether T1 extends T2.
 
@@ -71,3 +68,16 @@ import { User } from './generated-models';
 
 type UserId = Assert<Is<User['id'], number>>;
 ```
+
+## Other packages similar to this one
+
+These two are very similar, but require you to actually write code (call dummy `assert` function) instead of using plain types:
+
+- [`static-type-assert`](https://github.com/ksxnodemodules/static-type-assert)
+- [`ts-expect`](https://github.com/TypeStrong/ts-expect)
+
+Other utility types libraries:
+
+- [`dtslint`](https://github.com/Microsoft/dtslint)
+- [`tsd-check`](https://github.com/SamVerschueren/tsd-check/issues/10)
+- [`type-plus`](https://github.com/unional/type-plus)

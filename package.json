@@ -1,5 +1,5 @@
 {
-  "name": "@dkamyshov/ts-type-assert",
+  "name": "ts-type-assert",
   "version": "0.1.0",
   "main": "",
   "description": "Type assertion library for TypeScript",
