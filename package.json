@@ -1,0 +1,47 @@
+{
+  "name": "@dkamyshov/ts-type-assert",
+  "version": "0.1.0",
+  "main": "",
+  "description": "Type assertion library for TypeScript",
+  "repository": "https://github.com/dkamyshov/ts-type-assert",
+  "author": "Danil Kamyshov <danil.kamyshov@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "typescript",
+    "assert",
+    "types"
+  ],
+  "scripts": {
+    "prettier": "prettier --write * \"**/*.ts\"",
+    "lint": "eslint --ext .ts ./tests index.d.ts",
+    "test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": [
+      "prettier --write",
+      "eslint --quiet",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "typescript": ">=2.8.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.6.2",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "eslint": "^6.0.1",
+    "eslint-plugin-import": "^2.18.0",
+    "husky": "^3.0.0",
+    "jest": "^24.8.0",
+    "lint-staged": "^9.2.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.0.2"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "plugins": ["@typescript-eslint", "import"],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "./"
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "no-mixed-spaces-and-tabs": "off",
+    "import/no-default-export": "error",
+    "import/order": "warn",
+    "no-undefined": "error",
+    "no-undef-init": "error",
+    "prefer-arrow-callback": "error",
+    "prefer-const": "error",
+    "yield-star-spacing": "error",
+    "no-eq-null": "error",
+    "yoda": "error",
+    "no-var": "error",
+    "no-use-before-define": ["error", { "variables": false }],
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/explicit-function-return-type": "off"
+  },
+  "overrides": [
+    {
+      "files": ["*.spec.ts"],
+      "globals": {
+        "describe": "readonly",
+        "expect": "readonly",
+        "it": "readonly"
+      }
+    }
+  ]
+}
