@@ -32,7 +32,12 @@ export const invokeTypeChecker = (
   options?: TypeCheckerOptions
 ): Promise<TypeCheckerResult> => {
   return new Promise((resolve, reject) => {
-    const process = spawn(`yarn`, ['tsc', '--noEmit', filename]);
+    const process = spawn(`yarn`, [
+      'tsc',
+      '--noEmit',
+      filename,
+      '--skipLibCheck',
+    ]);
 
     const failTimeout =
       (options &&

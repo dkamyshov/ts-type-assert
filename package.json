@@ -1,6 +1,6 @@
 {
   "name": "ts-type-assert",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "",
   "description": "Type assertion library for TypeScript",
   "repository": "https://github.com/dkamyshov/ts-type-assert",
@@ -22,26 +22,26 @@
     }
   },
   "lint-staged": {
-    "**/*": [
+    "**/*.ts": [
       "prettier --write",
       "eslint --quiet",
       "git add"
     ]
   },
   "dependencies": {
-    "typescript": ">=2.8.0"
+    "typescript": ">=4.9.5"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.15",
-    "@types/node": "^12.6.2",
-    "@typescript-eslint/eslint-plugin": "^1.11.0",
-    "@typescript-eslint/parser": "^1.11.0",
-    "eslint": "^6.0.1",
-    "eslint-plugin-import": "^2.18.0",
+    "@types/jest": "^29.4.0",
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/parser": "^5.49.0",
+    "eslint": "^8.33.0",
+    "eslint-plugin-import": "^2.27.5",
     "husky": "^3.0.0",
-    "jest": "^24.8.0",
-    "lint-staged": "^9.2.0",
-    "prettier": "^1.18.2",
-    "ts-jest": "^24.0.2"
+    "jest": "^29.4.1",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.3",
+    "ts-jest": "^29.0.5"
   }
 }
